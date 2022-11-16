@@ -1,6 +1,6 @@
 package com.Destura.notesapp;
 
-import static com.Destura.notesapp.toQuizjava.list;
+import static com.Destura.notesapp.toOopQuiz.list;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -14,20 +14,18 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-
 import com.Destura.notesapp.QuizAvtivity.QuizActivity;
-
 import com.sasank.roundedhorizontalprogress.RoundedHorizontalProgressBar;
 
 import java.util.Collections;
 import java.util.List;
 
-public class Quizjava extends AppCompatActivity {
+public class OopQuiz extends AppCompatActivity {
 
     CountDownTimer countDownTimer;
     int timerValue=20;
     RoundedHorizontalProgressBar progressBar;
-    List<Modalclass>allQuestionslist;
+    List<Modalclass> allQuestionslist;
     Modalclass modalclass;
     int index=0;
     TextView card_quetion,optiona,optionb,optionc,optiond,ic_exit;
@@ -36,18 +34,17 @@ public class Quizjava extends AppCompatActivity {
     int wrongCount=0;
     LinearLayout nextBtn;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quizjava);
+        setContentView(R.layout.activity_oop_quiz);
 
         Hooks();
         progressBar = findViewById(R.id.quiz_timer);
         ic_exit=findViewById(R.id.ic_exit);
         allQuestionslist=list;
-        modalclass=list.get(index);
         Collections.shuffle(allQuestionslist);
+        modalclass=list.get(index);
 
         cardOA.setBackgroundColor(getResources().getColor(R.color.white));
         cardOB.setBackgroundColor(getResources().getColor(R.color.white));
@@ -61,7 +58,7 @@ public class Quizjava extends AppCompatActivity {
         ic_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Quizjava.this, QuizActivity.class);
+                Intent intent = new Intent(OopQuiz.this, QuizActivity.class);
                 startActivity(intent);
             }
         });
@@ -69,8 +66,8 @@ public class Quizjava extends AppCompatActivity {
         countDownTimer = new CountDownTimer(20000,1000) {
             @Override
             public void onTick(long millisUntilFinished) {
-                    timerValue = timerValue-1;
-                    progressBar.setProgress(timerValue);
+                timerValue = timerValue-1;
+                progressBar.setProgress(timerValue);
 
 
             }
@@ -79,14 +76,14 @@ public class Quizjava extends AppCompatActivity {
 
             @Override
             public void onFinish(){
-                Dialog dialog = new Dialog(Quizjava.this);
+                Dialog dialog = new Dialog(OopQuiz.this);
                 dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
                 dialog.setContentView(R.layout.time_out_dialog);
 
                 dialog.findViewById(R.id.btn_tryAgain).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(Quizjava.this, QuizActivity.class);
+                        Intent intent = new Intent(OopQuiz.this, QuizActivity.class);
                         startActivity(intent);
                     }
                 });
@@ -162,7 +159,7 @@ public class Quizjava extends AppCompatActivity {
     }
 
     private void gameWon() {
-        Intent intent= new Intent(Quizjava.this,WonActivity.class);
+        Intent intent= new Intent(OopQuiz.this,WonActivity.class);
         intent.putExtra("correct",correctCount);
         intent.putExtra("Wrong",wrongCount);
         startActivity(intent);
@@ -211,7 +208,7 @@ public class Quizjava extends AppCompatActivity {
             cardOB.setBackgroundColor(getResources().getColor(R.color.cool_green));
 
             if (index<list.size()-1){
-             Correct(cardOB);
+                Correct(cardOB);
             }
             else {
                 gameWon();

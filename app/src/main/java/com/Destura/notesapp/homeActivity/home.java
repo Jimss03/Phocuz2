@@ -109,7 +109,7 @@ mtomusic.setOnClickListener(new View.OnClickListener() {
         mtoquiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(home.this, toQuizjava.class);
+                Intent intent = new Intent(home.this, QuizActivity.class);
                 startActivity(intent);
             }
         });

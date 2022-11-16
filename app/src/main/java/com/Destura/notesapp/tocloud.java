@@ -1,11 +1,11 @@
 package com.Destura.notesapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -15,19 +15,17 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class toQuizjava extends AppCompatActivity {
-
-    public static ArrayList<Modalclass>list;
+public class tocloud extends AppCompatActivity {
+    public static ArrayList<Modalclass> list;
     DatabaseReference databaseReference;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_to_quizjava);
+        setContentView(R.layout.activity_tocloud);
 
         list=new ArrayList<>();
 
-        databaseReference= FirebaseDatabase.getInstance().getReference("Question");
+        databaseReference= FirebaseDatabase.getInstance().getReference("javaquiz");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -36,7 +34,7 @@ public class toQuizjava extends AppCompatActivity {
                     Modalclass modalclass=dataSnapshot.getValue(Modalclass.class);
                     list.add(modalclass);
                 }
-                Intent intent = new Intent(toQuizjava.this,Quizjava.class);
+                Intent intent = new Intent(tocloud.this,OopQuiz.class);
                 startActivity(intent);
             }
 
@@ -53,3 +51,5 @@ public class toQuizjava extends AppCompatActivity {
         },1500);
     }
 }
+
+

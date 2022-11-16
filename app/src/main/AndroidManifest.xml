@@ -20,6 +20,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".tocloud"
+            android:exported="false" />
+        <activity
+            android:name=".cloud"
+            android:exported="false" />
+        <activity
+            android:name=".tobackendQ"
+            android:exported="false" />
+        <activity
+            android:name=".toOopQuiz"
+            android:exported="false" />
+        <activity
+            android:name=".OopQuiz"
+            android:exported="false" />
+        <activity
             android:name=".WonActivity"
             android:exported="false" />
         <activity

@@ -15,19 +15,17 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class toQuizjava extends AppCompatActivity {
-
+public class tobackendQ extends AppCompatActivity {
     public static ArrayList<Modalclass>list;
     DatabaseReference databaseReference;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_to_quizjava);
+        setContentView(R.layout.activity_tobackend_q);
 
         list=new ArrayList<>();
 
-        databaseReference= FirebaseDatabase.getInstance().getReference("Question");
+        databaseReference= FirebaseDatabase.getInstance().getReference("dbQuiz");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -36,7 +34,7 @@ public class toQuizjava extends AppCompatActivity {
                     Modalclass modalclass=dataSnapshot.getValue(Modalclass.class);
                     list.add(modalclass);
                 }
-                Intent intent = new Intent(toQuizjava.this,Quizjava.class);
+                Intent intent = new Intent(tobackendQ.this,Quizjava.class);
                 startActivity(intent);
             }
 
@@ -53,3 +51,4 @@ public class toQuizjava extends AppCompatActivity {
         },1500);
     }
 }
+

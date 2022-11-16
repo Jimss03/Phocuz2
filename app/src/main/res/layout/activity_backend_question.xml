@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/bg_gredient"
-    tools:context=".Quizjava">
+    tools:context=".backendQuestion">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -164,8 +165,6 @@
             android:text="NEXT"/>
 
     </LinearLayout>
-
-
 
 
 </LinearLayout>

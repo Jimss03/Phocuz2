@@ -31,9 +31,7 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
         uid = user.getUid();
 
         holder.header.setText(model.getFilename());
-        holder.textviewbook.setText(String.valueOf(model.getNov()));
-        holder.textlike.setText(String.valueOf(model.getNol()));
-        holder.textdislike.setText(String.valueOf(model.getNod()));
+
 
                 holder.img1.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -60,8 +58,7 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
      {
          ImageView img1;
          TextView header;
-         ImageView readbook,likebook,dislikebook;
-         TextView textviewbook,textlike,textdislike;
+
 
          public myviewholder(@NonNull View itemView)
          {
@@ -70,13 +67,7 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
              img1=itemView.findViewById(R.id.img1);
              header=itemView.findViewById(R.id.header);
 
-             readbook=itemView.findViewById(R.id.readbook);
-             likebook=itemView.findViewById(R.id.likebook);
-             dislikebook=itemView.findViewById(R.id.dislikebook);
 
-             textviewbook=itemView.findViewById(R.id.textviewbook);
-             textlike=itemView.findViewById(R.id.textlike);
-             textdislike=itemView.findViewById(R.id.textdislike);
       }
      }
 }
