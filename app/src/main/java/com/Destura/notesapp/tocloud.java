@@ -34,7 +34,7 @@ public class tocloud extends AppCompatActivity {
                     Modalclass modalclass=dataSnapshot.getValue(Modalclass.class);
                     list.add(modalclass);
                 }
-                Intent intent = new Intent(tocloud.this,OopQuiz.class);
+                Intent intent = new Intent(tocloud.this,cloud.class);
                 startActivity(intent);
             }
 

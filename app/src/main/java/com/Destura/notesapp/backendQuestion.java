@@ -2,7 +2,7 @@ package com.Destura.notesapp;
 
 
 
-import static com.Destura.notesapp.toQuizjava.list;
+import static com.Destura.notesapp.tobackendQ.list;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;

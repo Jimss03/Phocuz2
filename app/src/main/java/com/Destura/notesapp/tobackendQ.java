@@ -34,7 +34,7 @@ public class tobackendQ extends AppCompatActivity {
                     Modalclass modalclass=dataSnapshot.getValue(Modalclass.class);
                     list.add(modalclass);
                 }
-                Intent intent = new Intent(tobackendQ.this,Quizjava.class);
+                Intent intent = new Intent(tobackendQ.this,backendQuestion.class);
                 startActivity(intent);
             }
 

@@ -19,6 +19,9 @@
         android:roundIcon="@mipmap/ic_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <activity android:name=".backendQuestion"
+            android:exported="false"/>
         <activity
             android:name=".tocloud"
             android:exported="false" />

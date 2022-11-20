@@ -59,7 +59,7 @@ public class QuizActivity extends AppCompatActivity {
         db1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(QuizActivity.this, tocloud.class);
+                Intent intent = new Intent(QuizActivity.this, tobackendQ.class);
                 startActivity(intent);
             }
         });
