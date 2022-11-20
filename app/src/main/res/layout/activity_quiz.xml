@@ -26,8 +26,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
-                android:layout_marginBottom="55dp"
-                android:layout_marginRight="25dp">
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="55dp">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
@@ -130,10 +130,9 @@
                         android:layout_marginBottom="10dp"
                         android:drawableRight="@drawable/ic_right_icon"
                         android:maxLines="3"
-                        android:text="programing"
+                        android:text="Python is a general-purpose language, used to create a variety of different programs, isn't specialized for specific problems."
                         android:textColor="@color/ColorBlackNote"
-                        android:textSize="15sp"
-                       />
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 
@@ -176,7 +175,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
-                        android:text="JAVA"
+                        android:text="OOP QUIZ"
                         android:textColor="@color/ColorBlackNote"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -187,10 +186,9 @@
                         android:layout_marginBottom="10dp"
                         android:drawableRight="@drawable/ic_right_icon"
                         android:maxLines="3"
-                        android:text="Programming"
+                        android:text="Object-oriented programming (OOP) is a language characterized by the identification of classes of objects linked with the functions."
                         android:textColor="@color/ColorBlackNote"
-                        android:textSize="15sp"
-                         />
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 
@@ -205,7 +203,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     app:cardBackgroundColor="@color/designMainColor"
                     app:cardCornerRadius="16dp">
 
@@ -217,15 +215,15 @@
                         android:adjustViewBounds="true"
                         android:cropToPadding="true"
                         android:maxWidth="50dp"
-                        android:src="@drawable/cssicons" />
+                        android:src="@drawable/database" />
 
                 </androidx.cardview.widget.CardView>
 
                 <LinearLayout
+                    android:id="@+id/css"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:id="@+id/css"
                     android:layout_marginTop="5dp"
                     android:orientation="vertical">
 
@@ -233,7 +231,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
-                        android:text="CSS"
+                        android:text="DATABASE"
                         android:textColor="@color/ColorBlackNote"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -244,10 +242,9 @@
                         android:layout_marginBottom="10dp"
                         android:drawableRight="@drawable/ic_right_icon"
                         android:maxLines="3"
-                        android:text="WEB DESING"
+                        android:text="A Database is an organized collection of structured information, or data, typically stored electronically in a computer system."
                         android:textColor="@color/ColorBlackNote"
-                        android:textSize="15sp"
-                         />
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 
@@ -263,7 +260,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     app:cardBackgroundColor="@color/designMainColor"
                     app:cardCornerRadius="16dp">
 
@@ -275,7 +272,7 @@
                         android:adjustViewBounds="true"
                         android:cropToPadding="true"
                         android:maxWidth="50dp"
-                        android:src="@drawable/icons8javascript64" />
+                        android:src="@drawable/aws" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -290,7 +287,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
-                        android:text="JAVASCRIPT"
+                        android:text="AWS QUIZ"
                         android:textColor="@color/ColorBlackNote"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -301,10 +298,9 @@
                         android:layout_marginBottom="10dp"
                         android:drawableRight="@drawable/ic_right_icon"
                         android:maxLines="3"
-                        android:text="Programming"
+                        android:text="AWS is designed to allow application providers, ISVs, and vendors to quickly and securely host your applications."
                         android:textColor="@color/ColorBlackNote"
-                        android:textSize="15sp"
-                     />
+                        android:textSize="15sp" />
 
                 </LinearLayout>
 

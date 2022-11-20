@@ -1,6 +1,6 @@
 package com.Destura.notesapp;
 
-public class oopModalclass {
+public class  oopModalclass {
     String oQuestion;
     String poA;
     String poB;

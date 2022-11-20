@@ -15,7 +15,7 @@ import com.mikhaellopez.circularprogressbar.CircularProgressBar;
 public class WonActivity extends AppCompatActivity {
 
     CircularProgressBar circularProgressBar;
-    TextView resultText;
+    TextView resultText,exit;
     int correct,wrong;
     LinearLayout btnshare;
     @Override
@@ -25,17 +25,27 @@ public class WonActivity extends AppCompatActivity {
         correct=getIntent().getIntExtra("correct",0);
         wrong=getIntent().getIntExtra("Wrong",0);
 
+        exit=findViewById(R.id.ic_exit);
         circularProgressBar= findViewById(R.id.circularProgressBar);
         resultText=findViewById(R.id.resultText);
         btnshare= findViewById(R.id.btnshare);
 
         circularProgressBar.setProgress(correct);
-        resultText.setText(correct+"/20");
+        resultText.setText(correct+"/5");
 
         btnshare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WonActivity.this, home.class);
+                startActivity(intent);
+            }
+        });
+
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(WonActivity.this, home.class);
+                startActivity(intent);
             }
         });
 

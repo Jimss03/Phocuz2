@@ -48,6 +48,8 @@ public class Pdfactivity extends AppCompatActivity {
         recview = (RecyclerView) findViewById(R.id.recview);
         recview.setLayoutManager(new LinearLayoutManager(this));
 
+
+
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
                         .setQuery(FirebaseDatabase.getInstance().getReference("user").child(uid),

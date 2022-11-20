@@ -13,25 +13,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.Destura.notesapp.MusicAct.MainActivity;
 import com.Destura.notesapp.Pdf.Pdfactivity;
 import com.Destura.notesapp.QuizAvtivity.QuizActivity;
-import com.Destura.notesapp.Quizjava;
 import com.Destura.notesapp.R;
+import com.Destura.notesapp.howto;
 import com.Destura.notesapp.loginregOut.loginActivity;
 import com.Destura.notesapp.noteActivity.notePage;
 import com.Destura.notesapp.notiblock.Status_Page;
-import com.Destura.notesapp.toQuizjava;
-import com.Destura.notesapp.video.Videoplaylistplayer;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 
 public class home extends AppCompatActivity {
 
-    private LinearLayout mtomusic, mtonote, mtolessontopics, mtoquiz,mtovideo;
-    private ImageView mplay_Song, mlogout;
+    private LinearLayout mtomusic, mtonote, mtolessontopics, mtoquiz;
+    private ImageView mplay_Song, mlogout,howtopage;
     private MediaPlayer mediaPlayer;
     Button tonoti;
-    DatabaseReference databaseReference;
     FirebaseDatabase database;
 
     @Override
@@ -42,12 +38,22 @@ public class home extends AppCompatActivity {
         mtomusic = findViewById(R.id.tomusic);
         mlogout = findViewById(R.id.logout);
         mtonote = findViewById(R.id.tonote);
-        mtovideo = findViewById(R.id.tovideo);
         mtolessontopics = findViewById(R.id.tolessontopics);
         mtoquiz = findViewById(R.id.toquiz);
         tonoti = findViewById(R.id.tonotiblocker);
         mediaPlayer = new MediaPlayer();
         database = FirebaseDatabase.getInstance();
+        howtopage =findViewById(R.id.tohowto);
+
+
+        howtopage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(home.this, howto.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
 
@@ -71,13 +77,6 @@ public class home extends AppCompatActivity {
 
 
 
-        mtovideo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(home.this, Videoplaylistplayer.class);
-                startActivity(intent);
-            }
-        });
 
 
 

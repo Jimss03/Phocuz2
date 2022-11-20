@@ -164,10 +164,8 @@ public class On_Off_Page extends Fragment {
                 }
             });
 
-            //register work
 
-
-            AudienceNetworkAds.initialize(getContext());
+          AudienceNetworkAds.initialize(getContext());
             loadNativeAd();
             bannerad();
             interstellar();

@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.Destura.notesapp.Pdf.model;
@@ -35,8 +36,9 @@ import com.karumi.dexter.listener.single.PermissionListener;
 
 public class uploadfile extends AppCompatActivity {
 
-    ImageView imagebrowse,imageupload,filelogo,cancelfile;
+    ImageView imagebrowse,filelogo,cancelfile;
     Uri filepath;
+    TextView imageupload;
 
     EditText filetitle;
 

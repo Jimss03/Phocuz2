@@ -43,6 +43,7 @@ public class  MainActivity extends AppCompatActivity {
         }
 
         private void permission() {
+
             if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE)
                     != PackageManager.PERMISSION_GRANTED) {
                 ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}
@@ -74,7 +75,7 @@ public class  MainActivity extends AppCompatActivity {
             TabLayout tabLayout = findViewById(R.id.tab_layout);
 
             ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(getSupportFragmentManager());
-            viewPagerAdapter.addFragments(new SongsFragment(), "title");
+            viewPagerAdapter.addFragments(new SongsFragment(), "Music Playlist");
             viewPagerAdapter.addFragments(new albumFragment(), "album");
             viewPager.setAdapter(viewPagerAdapter);
             tabLayout.setupWithViewPager(viewPager);

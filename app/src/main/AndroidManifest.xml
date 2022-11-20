@@ -19,9 +19,9 @@
         android:roundIcon="@mipmap/ic_launcher_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".backendQuestion"
-            android:exported="false"/>
+        <activity
+            android:name=".backendQuestion"
+            android:exported="false" />
         <activity
             android:name=".tocloud"
             android:exported="false" />
@@ -68,15 +68,6 @@
             android:name=".MusicAct.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".video.VideoFolderActivity3"
-            android:exported="false" />
-        <activity
-            android:name=".video.videoplayer"
-            android:exported="false" />
-        <activity
-            android:name=".video.Videoplaylistplayer"
-            android:exported="false" />
-        <activity
             android:name=".lessonActivity.uservideouploads"
             android:exported="false" />
         <activity
@@ -84,9 +75,6 @@
             android:exported="false" />
         <activity
             android:name=".lessonActivity.Showvideo1"
-            android:exported="false" />
-        <activity
-            android:name=".video.MainActivity2"
             android:exported="false" />
         <activity
             android:name=".lessonActivity.Showvideo"
@@ -111,6 +99,9 @@
             android:exported="false" />
         <activity
             android:name=".notiblock.Status_Page"
+            android:exported="false" />
+        <activity
+            android:name=".howto"
             android:exported="false" />
         <activity android:name=".loginregOut.loginActivity">
             <intent-filter>

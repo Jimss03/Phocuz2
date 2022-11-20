@@ -16,9 +16,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.262"
-        app:srcCompat="@drawable/browse" />
+        app:srcCompat="@drawable/pdfadd" />
 
-    <ImageView
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Browse PDF"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/filetitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filelogo" />
+
+    <TextView
         android:id="@+id/imageupload"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -28,24 +38,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.841"
-        app:srcCompat="@drawable/upload" />
+        android:textColor="@color/black"
+        android:textSize="40dp"
+       android:text="UPLOAD"
+        android:background="@drawable/next_btn"/>
 
     <EditText
         android:id="@+id/filetitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
-        android:layout_marginBottom="178dp"
+        android:layout_marginBottom="148dp"
         android:ems="10"
+        android:hint="File Title"
         android:inputType="textPersonName"
+        android:textColor="@color/black"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:textColor="@color/colorAccent"
-        android:hint="File Title"
         app:layout_constraintBottom_toTopOf="@+id/imageupload"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagebrowse" />
+        app:layout_constraintTop_toBottomOf="@+id/imagebrowse"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/filelogo"
@@ -58,12 +72,12 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/file" />
+        app:srcCompat="@drawable/pdff" />
 
     <ImageView
         android:id="@+id/cancelfile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
         android:layout_marginStart="270dp"
         android:layout_marginTop="96dp"
         android:layout_marginEnd="107dp"
@@ -72,7 +86,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cancel" />
+        app:srcCompat="@drawable/x" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
