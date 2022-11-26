@@ -33,6 +33,9 @@ public class howto extends AppCompatActivity {
         nextbtn = findViewById(R.id.nextbtn);
         skipbtn = findViewById(R.id.skipButton);
 
+
+
+
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,7 +93,7 @@ public class howto extends AppCompatActivity {
     @SuppressLint("NewApi")
     public void setUpindicator(int position){
 
-        dots = new TextView[4];
+        dots = new TextView[6];
         mDotLayout.removeAllViews();
 
         for (int i = 0 ; i < dots.length ; i++){

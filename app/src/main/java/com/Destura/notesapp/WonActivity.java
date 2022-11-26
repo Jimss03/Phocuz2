@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.Destura.notesapp.QuizAvtivity.QuizActivity;
 import com.Destura.notesapp.homeActivity.home;
 import com.mikhaellopez.circularprogressbar.CircularProgressBar;
 
@@ -28,23 +29,17 @@ public class WonActivity extends AppCompatActivity {
         exit=findViewById(R.id.ic_exit);
         circularProgressBar= findViewById(R.id.circularProgressBar);
         resultText=findViewById(R.id.resultText);
-        btnshare= findViewById(R.id.btnshare);
+
 
         circularProgressBar.setProgress(correct);
         resultText.setText(correct+"/5");
 
-        btnshare.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(WonActivity.this, home.class);
-                startActivity(intent);
-            }
-        });
+
 
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(WonActivity.this, home.class);
+                Intent intent = new Intent(WonActivity.this, QuizActivity.class);
                 startActivity(intent);
             }
         });

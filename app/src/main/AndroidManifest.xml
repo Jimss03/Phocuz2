@@ -71,16 +71,10 @@
             android:name=".lessonActivity.uservideouploads"
             android:exported="false" />
         <activity
-            android:name=".QuizAvtivity.javaquestion1"
-            android:exported="false" />
-        <activity
             android:name=".lessonActivity.Showvideo1"
             android:exported="false" />
         <activity
             android:name=".lessonActivity.Showvideo"
-            android:exported="false" />
-        <activity
-            android:name=".QuizAvtivity.QuestionActivity1"
             android:exported="false" />
         <activity
             android:name=".QuizAvtivity.QuizActivity"
@@ -103,6 +97,8 @@
         <activity
             android:name=".howto"
             android:exported="false" />
+
+
         <activity android:name=".loginregOut.loginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

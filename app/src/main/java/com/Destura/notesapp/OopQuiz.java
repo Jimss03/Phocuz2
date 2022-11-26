@@ -58,7 +58,7 @@ public class OopQuiz extends AppCompatActivity {
         ic_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OopQuiz.this, QuizActivity.class);
+                Intent intent = new Intent(OopQuiz.this, toOopQuiz.class);
                 startActivity(intent);
             }
         });

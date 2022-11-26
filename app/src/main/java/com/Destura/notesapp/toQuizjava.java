@@ -27,7 +27,7 @@ public class toQuizjava extends AppCompatActivity {
 
         list=new ArrayList<>();
 
-        databaseReference= FirebaseDatabase.getInstance().getReference("Question");
+        databaseReference= FirebaseDatabase.getInstance().getReference("Cloud");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override

@@ -59,7 +59,7 @@ public class backendQuestion extends AppCompatActivity {
         ic_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(backendQuestion.this, QuizActivity.class);
+                Intent intent = new Intent(backendQuestion.this, tobackendQ.class);
                 startActivity(intent);
             }
         });

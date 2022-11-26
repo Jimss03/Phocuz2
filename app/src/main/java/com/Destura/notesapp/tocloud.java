@@ -25,7 +25,7 @@ public class tocloud extends AppCompatActivity {
 
         list=new ArrayList<>();
 
-        databaseReference= FirebaseDatabase.getInstance().getReference("javaquiz");
+        databaseReference= FirebaseDatabase.getInstance().getReference("Cloud");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override

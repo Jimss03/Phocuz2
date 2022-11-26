@@ -14,21 +14,21 @@
 
 
         <TextView
+            android:id="@+id/ic_exit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/exit"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="@dimen/_15sdp"
             android:layout_centerVertical="true"
-            android:textColor="@color/white"
-            android:id="@+id/ic_exit"/>
+            android:layout_marginRight="@dimen/_15sdp"
+            android:text="@string/exit"
+            android:textColor="@color/white" />
 
 
     </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/r12"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="110dp"
         android:layout_below="@+id/toolbar"
         android:layout_width="@dimen/_170sdp"
         android:layout_height="@dimen/_170sdp"
@@ -38,13 +38,17 @@
             android:id="@+id/circularProgressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
             app:cpb_background_progressbar_color="@color/cool_pink"
             app:cpb_background_progressbar_width="10dp"
+
             app:cpb_progress_direction="to_right"
             app:cpb_progress_max="20"
             app:cpb_progressbar_color="@color/cool_green"
             app:cpb_progressbar_width="10dp"
-
             app:cpb_round_border="false" />
 
         <TextView
@@ -63,23 +67,7 @@
         android:layout_marginTop="70dp"
         android:layout_below="@+id/r12">
 
-        <LinearLayout
-            android:id="@+id/btnshare"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/_40sdp"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="@dimen/_40sdp"
-            android:layout_marginEnd="@dimen/_40sdp"
-            android:background="@drawable/share_shapre"
-            android:gravity="center">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="score"
-                android:textColor="@color/white"></TextView>
-        </LinearLayout>
 
         
     </RelativeLayout>

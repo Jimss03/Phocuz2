@@ -27,14 +27,15 @@
         android:textColor="@color/ColorGreenNote"/>
 
     <ImageView
+        android:id="@+id/tohowto"
         android:layout_width="30dp"
         android:layout_height="50dp"
-        android:id="@+id/tohowto"
-        android:src="@drawable/settings_icon"
         android:layout_below="@+id/logout"
         android:layout_alignParentEnd="true"
+        android:clickable="true"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="30dp"/>
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/settings_icon" />
 
 
     <ScrollView
@@ -330,7 +331,7 @@
                         android:adjustViewBounds="true"
                         android:cropToPadding="true"
                         android:maxWidth="50dp"
-                        android:src="@drawable/pdff" />
+                        android:src="@drawable/lessoniconhomes" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -345,7 +346,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
-                        android:text="PDF files"
+                        android:text="Lesson"
                         android:textColor="@color/ColorBlackNote"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -356,7 +357,7 @@
                         android:layout_marginBottom="10dp"
                         android:drawableRight="@drawable/ic_right_icon"
                         android:maxLines="3"
-                        android:text="uploded pdf"
+                        android:text="insert pdf lessons"
                         android:textColor="@color/ColorBlackNote"
                         android:textSize="15sp" />
 
