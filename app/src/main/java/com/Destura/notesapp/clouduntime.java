@@ -1,8 +1,6 @@
 package com.Destura.notesapp;
 
-
-
-import static com.Destura.notesapp.tobackendQ.list;
+import static com.Destura.notesapp.toclouduntime.list;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -17,18 +15,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.Destura.notesapp.QuizAvtivity.QuizActivity;
+import com.Destura.notesapp.Timedquiz.Modalclass;
+import com.Destura.notesapp.Timedquiz.WonActivity;
 import com.sasank.roundedhorizontalprogress.RoundedHorizontalProgressBar;
 
 import java.util.Collections;
 import java.util.List;
 
-public class backendQuestion extends AppCompatActivity {
-    CountDownTimer countDownTimer;
-    int timerValue=20;
-    RoundedHorizontalProgressBar progressBar;
+public class clouduntime extends AppCompatActivity {
+
+
     List<Modalclass> allQuestionslist;
-    Modalclass modalclass;
-    int index=0;
+    Modalclass modalclass; int index=0;
     TextView card_quetion,optiona,optionb,optionc,optiond,ic_exit;
     CardView cardOA,cardOB,cardOC,cardOD;
     int correctCount =0;
@@ -37,11 +35,9 @@ public class backendQuestion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_backend_question);
-
-
+        setContentView(R.layout.activity_clouduntime);
         Hooks();
-        progressBar = findViewById(R.id.quiz_timer);
+
         ic_exit=findViewById(R.id.ic_exit);
         allQuestionslist=list;
         Collections.shuffle(allQuestionslist);
@@ -59,40 +55,10 @@ public class backendQuestion extends AppCompatActivity {
         ic_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(backendQuestion.this, tobackendQ.class);
+                Intent intent = new Intent(clouduntime.this, QuizActivity.class);
                 startActivity(intent);
             }
         });
-
-        countDownTimer = new CountDownTimer(20000,1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                timerValue = timerValue-1;
-                progressBar.setProgress(timerValue);
-
-
-            }
-
-
-
-            @Override
-            public void onFinish(){
-                Dialog dialog = new Dialog(backendQuestion.this);
-                dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
-                dialog.setContentView(R.layout.time_out_dialog);
-
-                dialog.findViewById(R.id.btn_tryAgain).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(backendQuestion.this, QuizActivity.class);
-                        startActivity(intent);
-                    }
-                });
-                dialog.show();
-
-            }
-        }.start();
-
 
 
     }
@@ -106,7 +72,7 @@ public class backendQuestion extends AppCompatActivity {
     }
 
     private void Hooks() {
-        progressBar = findViewById(R.id.quiz_timer);
+
         card_quetion = findViewById(R.id.card_question);
         optiona = findViewById(R.id.card_optiona);
         optionb = findViewById(R.id.card_optionb);
@@ -160,7 +126,7 @@ public class backendQuestion extends AppCompatActivity {
     }
 
     private void gameWon() {
-        Intent intent= new Intent(backendQuestion.this,WonActivity.class);
+        Intent intent= new Intent(clouduntime.this, WonActivity.class);
         intent.putExtra("correct",correctCount);
         intent.putExtra("Wrong",wrongCount);
         startActivity(intent);

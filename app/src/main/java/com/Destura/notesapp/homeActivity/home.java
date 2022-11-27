@@ -10,13 +10,13 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.Destura.notesapp.MusicAct.MainActivity;
+import com.Destura.notesapp.MainActivity;
+import com.Destura.notesapp.MusicAct.MainActivitym;
 import com.Destura.notesapp.Pdf.Pdfactivity;
 import com.Destura.notesapp.QuizAvtivity.QuizActivity;
 import com.Destura.notesapp.R;
 import com.Destura.notesapp.howto;
 import com.Destura.notesapp.loginregOut.loginActivity;
-import com.Destura.notesapp.noteActivity.notePage;
 import com.Destura.notesapp.notiblock.Status_Page;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
@@ -43,7 +43,7 @@ public class home extends AppCompatActivity {
         tonoti = findViewById(R.id.tonotiblocker);
         mediaPlayer = new MediaPlayer();
         database = FirebaseDatabase.getInstance();
-        howtopage =findViewById(R.id.tohowto);
+        howtopage =findViewById(R.id.howtobtn);
 
 
         howtopage.setOnClickListener(new View.OnClickListener() {
@@ -85,7 +85,7 @@ mtomusic.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
 
-        Intent intent = new Intent(home.this, MainActivity.class);
+        Intent intent = new Intent(home.this, MainActivitym.class);
         startActivity(intent);
     }
 });
@@ -93,7 +93,7 @@ mtomusic.setOnClickListener(new View.OnClickListener() {
         mtonote.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(home.this, notePage.class);
+                Intent intent = new Intent(home.this,MainActivity.class);
                 startActivity(intent);
             }
         });

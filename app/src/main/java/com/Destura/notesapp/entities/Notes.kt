@@ -33,6 +33,7 @@ class Notes: Serializable {
     var color:String? = null
 
 
+
     override fun toString(): String {
 
         return "$title : $dateTime"

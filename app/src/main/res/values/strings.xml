@@ -72,15 +72,19 @@
     <string name="playlist_note">Tip: Click On ➕ To Create New Playlist. </string>
     <string name="player_interface_title">My Music</string>
 
-    <string name="heading_one">Quick &amp; Easy Payments</string>
-    <string name="heading_two">Instant Notifications</string>
-    <string name="heading_three">Cashless Payment</string>
-    <string name="heading_fourth">Pay Anywhere</string>
+    <string name="heading_one">QUIZ.</string>
+    <string name="heading_two">Todolist</string>
+    <string name="heading_three">Notification blocker</string>
+    <string name="heading_fourth">MUSIC</string>
+    <string name="heading_fifth">Lesson</string>
+    <string name="heading_six">Lofi</string>
 
     //Description
-    <string name="desc_one">Grow your Business By Accepting Card Payments with The New Card Reader</string>
-    <string name="desc_two">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
-    <string name="desc_three">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
-    <string name="desc_fourth">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
+    <string name="desc_one">Take Quizzes from our selection of topics</string>
+    <string name="desc_two">A list of the tasks that you have to do, or things that you want to do.</string>
+    <string name="desc_three">Block incoming notification prompt from appearing on screen.</string>
+    <string name="desc_fourth">Listen to music to make you feel more relaxed.</string>
+    <string name="desc_fifth">Gives you easy, reliable way to add and view documents.</string>
+    <string name="desc_six">Listen to our lofi music to help you study and focus more on the task at hand.</string>
 
 </resources>

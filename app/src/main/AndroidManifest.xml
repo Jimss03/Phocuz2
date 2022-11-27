@@ -20,32 +20,59 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".backendQuestion"
+            android:name=".toclouduntime"
             android:exported="false" />
         <activity
-            android:name=".tocloud"
+            android:name=".clouduntime"
             android:exported="false" />
         <activity
-            android:name=".cloud"
+            android:name=".tobackendQchoice"
             android:exported="false" />
         <activity
-            android:name=".tobackendQ"
+            android:name=".backendQchoice"
             android:exported="false" />
         <activity
-            android:name=".toOopQuiz"
+            android:name=".OopQuizuntime"
             android:exported="false" />
         <activity
-            android:name=".OopQuiz"
+            android:name=".toOopQuizuntime"
             android:exported="false" />
         <activity
-            android:name=".WonActivity"
+            android:name=".Quizpythonuntime"
             android:exported="false" />
         <activity
-            android:name=".toQuizjava"
+            android:name=".toQuizpythonuntime"
             android:exported="false" />
         <activity
-            android:name=".Quizjava"
+            android:name=".Timedquiz.backendQuestion"
             android:exported="false" />
+        <activity
+            android:name=".Timedquiz.tocloud"
+            android:exported="false" />
+        <activity
+            android:name=".Timedquiz.cloud"
+            android:exported="false" />
+        <activity
+            android:name=".Timedquiz.tobackendQ"
+            android:exported="false" />
+        <activity
+            android:name=".Timedquiz.toOopQuiz"
+            android:exported="false" />
+        <activity
+            android:name=".Timedquiz.OopQuiz"
+            android:exported="false" />
+        <activity
+            android:name=".Timedquiz.WonActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Timedquiz.toQuizpython"
+            android:exported="false" />
+        <activity
+            android:name=".Timedquiz.Quizpython"
+            android:exported="false" />
+        <activity android:name=".HistoryActivity" />
+        <activity android:name=".TaskActivity" />
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".Pdf.viewpdf"
             android:exported="false" />
@@ -56,16 +83,13 @@
             android:name=".Pdf.Pdfactivity"
             android:exported="false" />
         <activity
-            android:name=".QuizAvtivity.cssquiz"
-            android:exported="false" />
-        <activity
             android:name=".MusicAct.AlbumDetails"
             android:exported="false" />
         <activity
             android:name=".MusicAct.PlayerActivity"
             android:exported="false" />
         <activity
-            android:name=".MusicAct.MainActivity"
+            android:name=".MusicAct.MainActivitym"
             android:exported="false" />
         <activity
             android:name=".lessonActivity.uservideouploads"
@@ -97,8 +121,6 @@
         <activity
             android:name=".howto"
             android:exported="false" />
-
-
         <activity android:name=".loginregOut.loginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

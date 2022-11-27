@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/bg_gredient"
-    tools:context=".Quizjava">
+    tools:context=".Timedquiz.Quizpython">
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -1,12 +1,13 @@
 package com.Destura.notesapp;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.Destura.notesapp.Timedquiz.Modalclass;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -15,13 +16,14 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class tocloud extends AppCompatActivity {
+public class toclouduntime extends AppCompatActivity {
     public static ArrayList<Modalclass> list;
     DatabaseReference databaseReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tocloud);
+        setContentView(R.layout.activity_toclouduntime);
 
         list=new ArrayList<>();
 
@@ -34,7 +36,7 @@ public class tocloud extends AppCompatActivity {
                     Modalclass modalclass=dataSnapshot.getValue(Modalclass.class);
                     list.add(modalclass);
                 }
-                Intent intent = new Intent(tocloud.this,cloud.class);
+                Intent intent = new Intent(toclouduntime.this, clouduntime.class);
                 startActivity(intent);
             }
 

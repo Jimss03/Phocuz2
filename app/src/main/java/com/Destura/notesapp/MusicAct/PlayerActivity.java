@@ -1,7 +1,7 @@
 package com.Destura.notesapp.MusicAct;
 
 import static com.Destura.notesapp.MusicAct.AlbumDetailsAdapter.albumFiles;
-import static com.Destura.notesapp.MusicAct.MainActivity.musicFiles;
+import static com.Destura.notesapp.MusicAct.MainActivitym.musicFiles;
 
 
 import android.media.MediaMetadataRetriever;

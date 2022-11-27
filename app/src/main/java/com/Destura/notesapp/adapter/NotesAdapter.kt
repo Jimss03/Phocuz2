@@ -15,6 +15,7 @@ class NotesAdapter() :
     RecyclerView.Adapter<NotesAdapter.NotesViewHolder>() {
     var listener:OnItemClickListener? = null
     var arrList = ArrayList<Notes>()
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotesViewHolder {
         return NotesViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.item_rv_notes,parent,false)
@@ -66,6 +67,7 @@ class NotesAdapter() :
     }
 
     class NotesViewHolder(view:View) : RecyclerView.ViewHolder(view){
+
 
     }
 

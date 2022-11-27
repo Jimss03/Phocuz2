@@ -1,5 +1,6 @@
 package com.Destura.notesapp.noteActivity
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -20,6 +21,7 @@ class HomeFragment : BaseFragment() {
 
     var arrNotes = ArrayList<Notes>()
     var notesAdapter: NotesAdapter = NotesAdapter()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -110,6 +112,7 @@ class HomeFragment : BaseFragment() {
     }
 
 
+    @SuppressLint("UseRequireInsteadOfGet")
     fun replaceFragment(fragment:Fragment, istransition:Boolean){
         val fragmentTransition = activity!!.supportFragmentManager.beginTransaction()
 

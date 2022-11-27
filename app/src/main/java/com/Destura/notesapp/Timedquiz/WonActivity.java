@@ -1,16 +1,15 @@
-package com.Destura.notesapp;
+package com.Destura.notesapp.Timedquiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.transition.CircularPropagation;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.Destura.notesapp.QuizAvtivity.QuizActivity;
-import com.Destura.notesapp.homeActivity.home;
+import com.Destura.notesapp.R;
 import com.mikhaellopez.circularprogressbar.CircularProgressBar;
 
 public class WonActivity extends AppCompatActivity {

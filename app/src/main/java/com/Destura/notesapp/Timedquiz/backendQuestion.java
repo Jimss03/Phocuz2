@@ -1,6 +1,8 @@
-package com.Destura.notesapp;
+package com.Destura.notesapp.Timedquiz;
 
-import static com.Destura.notesapp.tocloud.list;
+
+
+import static com.Destura.notesapp.Timedquiz.tobackendQ.list;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -15,29 +17,29 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.Destura.notesapp.QuizAvtivity.QuizActivity;
+import com.Destura.notesapp.R;
 import com.sasank.roundedhorizontalprogress.RoundedHorizontalProgressBar;
 
 import java.util.Collections;
 import java.util.List;
 
-public class cloud extends AppCompatActivity {
-
+public class backendQuestion extends AppCompatActivity {
     CountDownTimer countDownTimer;
     int timerValue=20;
     RoundedHorizontalProgressBar progressBar;
     List<Modalclass> allQuestionslist;
-    Modalclass modalclass; int index=0;
+    Modalclass modalclass;
+    int index=0;
     TextView card_quetion,optiona,optionb,optionc,optiond,ic_exit;
     CardView cardOA,cardOB,cardOC,cardOD;
     int correctCount =0;
     int wrongCount=0;
     LinearLayout nextBtn;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cloud);
+        setContentView(R.layout.activity_backend_question);
+
 
         Hooks();
         progressBar = findViewById(R.id.quiz_timer);
@@ -58,7 +60,7 @@ public class cloud extends AppCompatActivity {
         ic_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(cloud.this, QuizActivity.class);
+                Intent intent = new Intent(backendQuestion.this, tobackendQ.class);
                 startActivity(intent);
             }
         });
@@ -76,14 +78,14 @@ public class cloud extends AppCompatActivity {
 
             @Override
             public void onFinish(){
-                Dialog dialog = new Dialog(cloud.this);
+                Dialog dialog = new Dialog(backendQuestion.this);
                 dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
                 dialog.setContentView(R.layout.time_out_dialog);
 
                 dialog.findViewById(R.id.btn_tryAgain).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent intent = new Intent(cloud.this, QuizActivity.class);
+                        Intent intent = new Intent(backendQuestion.this, QuizActivity.class);
                         startActivity(intent);
                     }
                 });
@@ -159,7 +161,7 @@ public class cloud extends AppCompatActivity {
     }
 
     private void gameWon() {
-        Intent intent= new Intent(cloud.this,WonActivity.class);
+        Intent intent= new Intent(backendQuestion.this, WonActivity.class);
         intent.putExtra("correct",correctCount);
         intent.putExtra("Wrong",wrongCount);
         startActivity(intent);
@@ -257,4 +259,5 @@ public class cloud extends AppCompatActivity {
             Wrong(cardOD);
         }
     }
+
 }
