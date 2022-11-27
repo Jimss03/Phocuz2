@@ -1,4 +1,4 @@
-package com.Destura.notesapp;
+package com.Destura.notesapp.howto;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,16 +11,20 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
+import com.Destura.notesapp.R;
+
 public class ViewPagerAdapter extends PagerAdapter {
 
     Context context;
 
     int images[] = {
 
-            R.drawable.image1,
-            R.drawable.image2,
-            R.drawable.image3,
-            R.drawable.image4
+            R.drawable.navquiz,
+            R.drawable.navtodo,
+            R.drawable.navnoti,
+            R.drawable.navmusic,
+            R.drawable.navpdf,
+            R.drawable.navlofi
 
     };
 
@@ -29,7 +33,9 @@ public class ViewPagerAdapter extends PagerAdapter {
             R.string.heading_one,
             R.string.heading_two,
             R.string.heading_three,
-            R.string.heading_fourth
+            R.string.heading_fourth,
+            R.string.heading_fifth,
+            R.string.heading_six
     };
 
     int description[] = {
@@ -37,7 +43,10 @@ public class ViewPagerAdapter extends PagerAdapter {
       R.string.desc_one,
       R.string.desc_two,
       R.string.desc_three,
-      R.string.desc_fourth
+      R.string.desc_fourth,
+      R.string.desc_fifth,
+      R.string.desc_six
+
     };
 
     public ViewPagerAdapter(Context context){

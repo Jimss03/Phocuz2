@@ -1,46 +1,40 @@
-package com.Destura.notesapp;
+package com.Destura.notesapp.untimequiz;
 
-import static com.Destura.notesapp.tocloud.list;
-
+import static com.Destura.notesapp.untimequiz.tobackendQchoice.list;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.Destura.notesapp.QuizAvtivity.QuizActivity;
-import com.sasank.roundedhorizontalprogress.RoundedHorizontalProgressBar;
+import com.Destura.notesapp.R;
+import com.Destura.notesapp.Timedquiz.Modalclass;
+import com.Destura.notesapp.Timedquiz.WonActivity;
+import com.Destura.notesapp.Timedquiz.tobackendQ;
+
+
 
 import java.util.Collections;
 import java.util.List;
 
-public class cloud extends AppCompatActivity {
-
-    CountDownTimer countDownTimer;
-    int timerValue=20;
-    RoundedHorizontalProgressBar progressBar;
+public class backendQchoice extends AppCompatActivity {
     List<Modalclass> allQuestionslist;
-    Modalclass modalclass; int index=0;
+    Modalclass modalclass;
+    int index=0;
     TextView card_quetion,optiona,optionb,optionc,optiond,ic_exit;
     CardView cardOA,cardOB,cardOC,cardOD;
     int correctCount =0;
     int wrongCount=0;
     LinearLayout nextBtn;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cloud);
-
+        setContentView(R.layout.activity_backend_qchoice);
         Hooks();
-        progressBar = findViewById(R.id.quiz_timer);
+
         ic_exit=findViewById(R.id.ic_exit);
         allQuestionslist=list;
         Collections.shuffle(allQuestionslist);
@@ -58,41 +52,10 @@ public class cloud extends AppCompatActivity {
         ic_exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(cloud.this, QuizActivity.class);
+                Intent intent = new Intent(backendQchoice.this, tobackendQ.class);
                 startActivity(intent);
             }
         });
-
-        countDownTimer = new CountDownTimer(20000,1000) {
-            @Override
-            public void onTick(long millisUntilFinished) {
-                timerValue = timerValue-1;
-                progressBar.setProgress(timerValue);
-
-
-            }
-
-
-
-            @Override
-            public void onFinish(){
-                Dialog dialog = new Dialog(cloud.this);
-                dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
-                dialog.setContentView(R.layout.time_out_dialog);
-
-                dialog.findViewById(R.id.btn_tryAgain).setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Intent intent = new Intent(cloud.this, QuizActivity.class);
-                        startActivity(intent);
-                    }
-                });
-                dialog.show();
-
-            }
-        }.start();
-
-
 
     }
 
@@ -105,7 +68,6 @@ public class cloud extends AppCompatActivity {
     }
 
     private void Hooks() {
-        progressBar = findViewById(R.id.quiz_timer);
         card_quetion = findViewById(R.id.card_question);
         optiona = findViewById(R.id.card_optiona);
         optionb = findViewById(R.id.card_optionb);
@@ -159,7 +121,7 @@ public class cloud extends AppCompatActivity {
     }
 
     private void gameWon() {
-        Intent intent= new Intent(cloud.this,WonActivity.class);
+        Intent intent= new Intent(backendQchoice.this, WonActivity.class);
         intent.putExtra("correct",correctCount);
         intent.putExtra("Wrong",wrongCount);
         startActivity(intent);
@@ -257,4 +219,7 @@ public class cloud extends AppCompatActivity {
             Wrong(cardOD);
         }
     }
+
+
+
 }

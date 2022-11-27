@@ -1,4 +1,4 @@
-package com.Destura.notesapp;
+package com.Destura.notesapp.Timedquiz;
 
 public class Modalclass {
 

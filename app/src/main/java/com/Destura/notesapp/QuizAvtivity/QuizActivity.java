@@ -1,49 +1,91 @@
 package com.Destura.notesapp.QuizAvtivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 
 import com.Destura.notesapp.R;
-import com.Destura.notesapp.toOopQuiz;
-import com.Destura.notesapp.toQuizjava;
-import com.Destura.notesapp.tobackendQ;
-import com.Destura.notesapp.tocloud;
+import com.Destura.notesapp.Timedquiz.toOopQuiz;
+import com.Destura.notesapp.Timedquiz.toQuizpython;
+import com.Destura.notesapp.Timedquiz.tobackendQ;
+import com.Destura.notesapp.Timedquiz.tocloud;
+import com.Destura.notesapp.untimequiz.toOopQuizuntime;
+import com.Destura.notesapp.untimequiz.toQuizpythonuntime;
+import com.Destura.notesapp.untimequiz.tobackendQchoice;
 
 
 public class QuizActivity extends AppCompatActivity {
-    private LinearLayout mtoquiz1;
-    private LinearLayout mtojavaquiz1,mtocss,db1;
+    private LinearLayout mtopython;
+    private LinearLayout mtooop,mtocss,db1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
-
-        mtoquiz1 = findViewById(R.id.toquiz1);
-        mtojavaquiz1 = findViewById(R.id.tojavaquiz1);
+        mtopython = findViewById(R.id.toquiz1);
+        mtooop = findViewById(R.id.tojavaquiz1);
         mtocss = findViewById(R.id.css);
         db1 =findViewById(R.id.db);
 
 
-        mtoquiz1.setOnClickListener(new View.OnClickListener() {
+        mtopython.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(QuizActivity.this, toOopQuiz.class);
-                startActivity(intent);
+                Dialog dialog = new Dialog(QuizActivity.this);
+                dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
+                dialog.setContentView(R.layout.pytonchoic);
+
+                dialog.findViewById(R.id.pytimeq).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(QuizActivity.this, toQuizpython.class);
+                        startActivity(intent);
+                    }
+                });
+                dialog.findViewById(R.id.pyuntime).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(QuizActivity.this, toQuizpythonuntime.class);
+                        startActivity(intent);
+                    }
+                });
+                dialog.show();
+
             }
 
         });
 
-        mtojavaquiz1.setOnClickListener(new View.OnClickListener() {
+
+
+        mtooop.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(QuizActivity.this, toQuizjava.class);
-                startActivity(intent);
+                Dialog dialog = new Dialog(QuizActivity.this);
+                dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
+                dialog.setContentView(R.layout.oopchoic);
+
+                dialog.findViewById(R.id.pytimeq).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(QuizActivity.this, toOopQuiz.class);
+                        startActivity(intent);
+                    }
+                });
+                dialog.findViewById(R.id.pyuntime).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(QuizActivity.this, toOopQuizuntime.class);
+                        startActivity(intent);
+                    }
+                });
+                dialog.show();
+
             }
         });
 
@@ -51,16 +93,50 @@ public class QuizActivity extends AppCompatActivity {
         mtocss.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(QuizActivity.this, tocloud.class);
-                startActivity(intent);
+                Dialog dialog = new Dialog(QuizActivity.this);
+                dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
+                dialog.setContentView(R.layout.dbmschoice);
+                dialog.findViewById(R.id.pytimeq).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(QuizActivity.this, tobackendQ.class);
+                        startActivity(intent);
+                    }
+                });
+                dialog.findViewById(R.id.pyuntime).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(QuizActivity.this, tobackendQchoice.class);
+                        startActivity(intent);
+                    }
+                });
+                dialog.show();
+
             }
         });
 
         db1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(QuizActivity.this, tobackendQ.class);
-                startActivity(intent);
+                Dialog dialog = new Dialog(QuizActivity.this);
+                dialog.getWindow().addFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
+                dialog.setContentView(R.layout.dbmschoice);
+                dialog.findViewById(R.id.pytimeq).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(QuizActivity.this, tocloud.class);
+                        startActivity(intent);
+                    }
+                });
+                dialog.findViewById(R.id.pyuntime).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(QuizActivity.this, tobackendQchoice.class);
+                        startActivity(intent);
+                    }
+                });
+                dialog.show();
+
             }
         });
 

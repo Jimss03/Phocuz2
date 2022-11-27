@@ -1,4 +1,4 @@
-package com.Destura.notesapp;
+package com.Destura.notesapp.howto;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -12,8 +12,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import com.Destura.notesapp.R;
 import com.Destura.notesapp.homeActivity.home;
-import com.Destura.notesapp.loginregOut.loginActivity;
 
 public class howto extends AppCompatActivity {
 
@@ -53,7 +53,7 @@ public class howto extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (getitem(0) < 3)
+                if (getitem(0) < 5)
                     mSLideViewPager.setCurrentItem(getitem(1),true);
                 else {
 

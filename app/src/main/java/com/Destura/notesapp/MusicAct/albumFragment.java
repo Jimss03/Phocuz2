@@ -1,7 +1,7 @@
 package com.Destura.notesapp.MusicAct;
 
 
-import static com.Destura.notesapp.MusicAct.MainActivity.albums;
+import static com.Destura.notesapp.MusicAct.MainActivitym.albums;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:background="@drawable/bg_gredient"
     android:layout_height="match_parent"
-    tools:context=".cloud">
+    tools:context=".Timedquiz.cloud">
 
     <RelativeLayout
         android:layout_width="match_parent"

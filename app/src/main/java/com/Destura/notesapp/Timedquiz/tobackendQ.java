@@ -1,12 +1,13 @@
-package com.Destura.notesapp;
+package com.Destura.notesapp.Timedquiz;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
+import com.Destura.notesapp.R;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -15,17 +16,19 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 
-public class tocloud extends AppCompatActivity {
-    public static ArrayList<Modalclass> list;
+public class tobackendQ extends AppCompatActivity {
+
+    public static ArrayList<Modalclass>list;
     DatabaseReference databaseReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tocloud);
+        setContentView(R.layout.activity_tobackend_q);
 
         list=new ArrayList<>();
 
-        databaseReference= FirebaseDatabase.getInstance().getReference("Cloud");
+        databaseReference= FirebaseDatabase.getInstance().getReference("dbQuiz");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -34,7 +37,7 @@ public class tocloud extends AppCompatActivity {
                     Modalclass modalclass=dataSnapshot.getValue(Modalclass.class);
                     list.add(modalclass);
                 }
-                Intent intent = new Intent(tocloud.this,cloud.class);
+                Intent intent = new Intent(tobackendQ.this, backendQuestion.class);
                 startActivity(intent);
             }
 
@@ -51,5 +54,4 @@ public class tocloud extends AppCompatActivity {
         },1500);
     }
 }
-
 

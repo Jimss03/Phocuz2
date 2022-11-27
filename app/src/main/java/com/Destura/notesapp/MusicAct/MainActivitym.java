@@ -25,7 +25,7 @@ import com.google.android.material.tabs.TabLayout;
 import java.util.ArrayList;
 
 
-public class  MainActivity extends AppCompatActivity {
+public class MainActivitym extends AppCompatActivity {
 
 
 
@@ -37,7 +37,7 @@ public class  MainActivity extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
+            setContentView(R.layout.activity_mainm);
             permission();
 
         }
@@ -46,7 +46,7 @@ public class  MainActivity extends AppCompatActivity {
 
             if (ContextCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE)
                     != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}
+                ActivityCompat.requestPermissions(MainActivitym.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}
                         , REQUEST_CODE);
             } else {
 
@@ -64,7 +64,7 @@ public class  MainActivity extends AppCompatActivity {
                     musicFiles = getAllAudio(this);
                     initViewPager();
                 } else {
-                    ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}
+                    ActivityCompat.requestPermissions(MainActivitym.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}
                             , REQUEST_CODE);
                 }
             }
