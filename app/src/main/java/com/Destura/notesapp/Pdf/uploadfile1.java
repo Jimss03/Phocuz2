@@ -15,7 +15,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.Destura.notesapp.Pdf.model;
 import com.Destura.notesapp.R;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,8 +32,7 @@ import com.karumi.dexter.listener.PermissionGrantedResponse;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.single.PermissionListener;
 
-
-public class uploadfile extends AppCompatActivity {
+public class uploadfile1 extends AppCompatActivity {
 
     ImageView imagebrowse,filelogo,cancelfile;
     Uri filepath;
@@ -47,17 +45,15 @@ public class uploadfile extends AppCompatActivity {
     FirebaseUser user;
     String uid;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_uploadfile);
-
+        setContentView(R.layout.activity_uploadfile1);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         storageReference= FirebaseStorage.getInstance().getReference();
-        databaseReference= FirebaseDatabase.getInstance().getReference("user");
+        databaseReference= FirebaseDatabase.getInstance().getReference("user1");
 
         filetitle=findViewById(R.id.filetitle);
 
@@ -67,7 +63,7 @@ public class uploadfile extends AppCompatActivity {
         filelogo=findViewById(R.id.filelogo);
         cancelfile=findViewById(R.id.cancelfile);
 
-        user =FirebaseAuth.getInstance().getCurrentUser();
+        user = FirebaseAuth.getInstance().getCurrentUser();
         uid = user.getUid();
 
         filelogo.setVisibility(View.INVISIBLE);
@@ -93,7 +89,6 @@ public class uploadfile extends AppCompatActivity {
                             public void onPermissionGranted(PermissionGrantedResponse permissionGrantedResponse) {
                                 Intent intent=new Intent();
                                 intent.setType("application/pdf");
-
                                 intent.setAction(Intent.ACTION_GET_CONTENT);
                                 startActivityForResult(Intent.createChooser(intent,"Select Pdf Files"),101);
                             }

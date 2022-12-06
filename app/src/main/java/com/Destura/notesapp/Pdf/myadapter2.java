@@ -22,13 +22,13 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewholder>
+public class myadapter2 extends FirebaseRecyclerAdapter<model, myadapter2.myviewholder>
 {
     FirebaseUser user;
     String uid;
 
 
-    public myadapter(@NonNull FirebaseRecyclerOptions<model> options) {
+    public myadapter2(@NonNull FirebaseRecyclerOptions<model> options) {
         super(options);
     }
 
@@ -63,7 +63,7 @@ public class myadapter extends FirebaseRecyclerAdapter<model,myadapter.myviewhol
                         builder.setPositiveButton("Delete", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
-                                FirebaseDatabase.getInstance().getReference("user").child(uid)
+                                FirebaseDatabase.getInstance().getReference("user2").child(uid)
                                         .child(getRef(position).getKey()).removeValue();
 
                             }

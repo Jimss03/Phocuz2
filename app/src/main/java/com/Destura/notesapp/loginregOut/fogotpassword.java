@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.Destura.notesapp.R;
-import com.Destura.notesapp.noteActivity.notePage;
+
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -44,7 +44,7 @@ public class fogotpassword extends AppCompatActivity {
         mgobacktologin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(fogotpassword.this, notePage.class);
+                Intent intent=new Intent(fogotpassword.this,loginActivity.class);
                 startActivity(intent);
             }
         });

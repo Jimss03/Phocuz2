@@ -119,7 +119,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
-                        android:text="PYHTON QUIZ"
+                        android:text="PYTHON QUIZ"
                         android:textColor="@color/ColorBlackNote"
                         android:textSize="18sp"
                         android:textStyle="bold" />

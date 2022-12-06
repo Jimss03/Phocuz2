@@ -20,6 +20,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".uploadfile4"
+            android:exported="false" />
+        <activity
+            android:name=".Pdfactivity4"
+            android:exported="false" />
+        <activity
+            android:name=".uploadfile3"
+            android:exported="false" />
+        <activity
+            android:name=".uploadfile2"
+            android:exported="false" />
+        <activity
+            android:name=".Pdfactivity2"
+            android:exported="false" />
+        <activity
+            android:name=".Pdf.uploadfile1"
+            android:exported="false" />
+        <activity
+            android:name=".Pdfactivity1"
+            android:exported="false" />
+        <activity
             android:name=".LessonCategory1"
             android:exported="false" />
         <activity
@@ -75,7 +96,6 @@
             android:exported="false" />
         <activity android:name=".todo.HistoryActivity" />
         <activity android:name=".todo.TaskActivity" />
-        <activity android:name=".todo.MainActivity" />
         <activity
             android:name=".Pdf.viewpdf"
             android:exported="false" />
@@ -85,7 +105,6 @@
         <activity
             android:name=".Pdf.Pdfactivity"
             android:exported="false" />
-
         <activity
             android:name=".MusicAct.AlbumDetails"
             android:exported="false" />
@@ -97,6 +116,9 @@
             android:exported="false" />
         <activity
             android:name=".lessonActivity.uservideouploads"
+            android:exported="false" />
+        <activity
+            android:name=".todo.MainActivity"
             android:exported="false" />
         <activity
             android:name=".lessonActivity.Showvideo1"
@@ -124,6 +146,10 @@
             android:exported="false" />
         <activity
             android:name=".howto.howto"
+            android:exported="false" />
+
+        <activity
+            android:name=".Pdfactivity3"
             android:exported="false" />
         <activity android:name=".loginregOut.loginActivity">
             <intent-filter>

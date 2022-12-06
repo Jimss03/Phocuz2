@@ -42,7 +42,7 @@ class TodoAdapter(val list: List<TodoModel>) : RecyclerView.Adapter<TodoAdapter.
             with(itemView) {
                 val colors = resources.getIntArray(R.array.random_color)
                 val randomColor = colors[Random().nextInt(colors.size)]
-                viewColorTag.setBackgroundColor(randomColor)
+
                 txtShowTitle.text = todoModel.title
                 txtShowTask.text = todoModel.description
                 txtShowCategory.text = todoModel.category

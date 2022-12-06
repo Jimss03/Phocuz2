@@ -1,5 +1,4 @@
-package com.Destura.notesapp.Pdf;
-
+package com.Destura.notesapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -10,31 +9,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 
-import com.Destura.notesapp.R;
+import com.Destura.notesapp.Pdf.model;
+
+import com.Destura.notesapp.Pdf.myadapter2;
+
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-
-public class Pdfactivity extends AppCompatActivity {
-
+public class Pdfactivity2 extends AppCompatActivity {
     FloatingActionButton fb;
     RecyclerView recview;
-    myadapter adapter;
-
-
-
-
+    myadapter2 adapter;
     String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pdfactivity);
-
-
-
+        setContentView(R.layout.activity_pdfactivity2);
 
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
@@ -42,7 +35,7 @@ public class Pdfactivity extends AppCompatActivity {
         fb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), uploadfile.class));
+                startActivity(new Intent(getApplicationContext(), uploadfile2.class));
             }
         });
 
@@ -53,18 +46,15 @@ public class Pdfactivity extends AppCompatActivity {
 
         FirebaseRecyclerOptions<model> options =
                 new FirebaseRecyclerOptions.Builder<model>()
-                        .setQuery(FirebaseDatabase.getInstance().getReference("user").child(uid),
+                        .setQuery(FirebaseDatabase.getInstance().getReference("user2").child(uid),
                                 model.class)
-                                .build();
+                        .build();
 
-        adapter=new myadapter(options);
+        adapter=new myadapter2(options);
         recview.setAdapter(adapter);
 
 
     }
-
-
-
 
     @Override
     protected void onStart() {
@@ -77,5 +67,4 @@ public class Pdfactivity extends AppCompatActivity {
         super.onStop();
         adapter.stopListening();
     }
-
 }

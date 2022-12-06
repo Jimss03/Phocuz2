@@ -31,7 +31,7 @@ public class WonActivity extends AppCompatActivity {
 
 
         circularProgressBar.setProgress(correct);
-        resultText.setText(correct+"/5");
+        resultText.setText(correct+"/30");
 
 
 

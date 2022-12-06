@@ -6,99 +6,111 @@
     android:layout_height="match_parent"
     tools:context=".LessonCategory1">
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/desing12"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="15dp"
+            android:minHeight="100dp"
+            app:cardBackgroundColor="@color/designMainColor"
+            app:cardCornerRadius="16dp"
+            app:cardPreventCornerOverlap="false">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Phocuz Document Case"
+                        android:textColor="@color/ColorWhite"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <!--                    <TextView-->
+                    android:id="@+id/toupload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:text="Upload Video"
+                    android:textColor="@color/ColorBlueNote"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    android:elevation="44dp"
+                    android:src="@drawable/onlinelearningvector" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+   <ScrollView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+     android:layout_below="@+id/desing12">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/desing12"
         android:layout_marginTop="10dp"
         android:orientation="vertical">
 
-        <RelativeLayout
+
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="25dp">
-
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginBottom="25dp"
-                android:minHeight="100dp"
-                app:cardBackgroundColor="@color/designMainColor"
-                app:cardCornerRadius="16dp"
-                app:cardPreventCornerOverlap="false">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:gravity="center_vertical">
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:padding="10dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="HOME PAGE"
-                            android:textColor="@color/ColorWhite"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="15dp"
-                            android:text="stay fucos"
-                            android:textColor="@color/ColorWhite"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
-
-
-                    </LinearLayout>
-
-
-                    <ImageView
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:adjustViewBounds="true"
-                        android:cropToPadding="true"
-                        android:elevation="44dp"
-                        android:src="@drawable/hero" />
-
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </RelativeLayout>
+            android:layout_marginRight="25dp"
+            app:cardCornerRadius="16dp">
 
             <LinearLayout
-                android:id="@+id/personal"
+                android:id="@+id/activity1"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:cardBackgroundColor="@color/designMainColor">
+                android:layout_height="match_parent"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal">
+
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:cardBackgroundColor="@color/designMainColor"
-                    app:cardCornerRadius="16dp">
+                    android:layout_height="match_parent">
 
                     <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
                         android:layout_margin="10dp"
                         android:adjustViewBounds="true"
                         android:cropToPadding="true"
                         android:maxWidth="50dp"
-                        android:src="@drawable/musicicon" />
+                        android:src="@drawable/foldering" />
 
                 </androidx.cardview.widget.CardView>
 
@@ -106,80 +118,76 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/p1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
-                        android:text="Music"
+                        android:text="Personal"
                         android:textColor="@color/ColorBlackNote"
                         android:textSize="18sp"
-                        android:editable="true"
-                        android:saveEnabled="true"
-                        android:freezesText="true"
+                        android:id="@+id/java"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
+                        android:drawableRight="@drawable/ic_right_icon"
                         android:maxLines="3"
-                        android:text="Allows you"
+                        android:text="Personal papers/ \nfiles"
                         android:textColor="@color/ColorBlackNote"
-                        android:textSize="15sp" />
-
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
             </LinearLayout>
 
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="25dp"
+            app:cardCornerRadius="16dp">
+
             <LinearLayout
-                android:id="@+id/homework"
+
+                android:id="@+id/activity2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                app:cardBackgroundColor="@color/designMainColor">
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal">
 
-                <androidx.cardview.widget.CardView
+
+                <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:cardBackgroundColor="@color/designMainColor"
-                    app:cardCornerRadius="16dp">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_margin="10dp"
-                        android:adjustViewBounds="true"
-                        android:cropToPadding="true"
-                        android:maxWidth="50dp"
-                        android:src="@drawable/musicicon" />
-
-                </androidx.cardview.widget.CardView>
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    android:maxWidth="50dp"
+                    android:src="@drawable/foldering" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="5dp"
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/p2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
-                        android:text="Music"
-                        android:editable="true"
-                        android:singleLine="true"
-                        android:inputType="text"
-                        android:focusable="true"
-                        android:cursorVisible="true"
-                        android:clickable="true"
+                        android:text="School Works"
                         android:textColor="@color/ColorBlackNote"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -188,19 +196,209 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="10dp"
+                        android:drawableRight="@drawable/ic_right_icon"
                         android:maxLines="3"
-                        android:text="Allows you"
+                        android:text="Materials for school, comprising homework and work done in class"
                         android:textColor="@color/ColorBlackNote"
-                        android:textSize="15sp" />
-
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
 
                 </LinearLayout>
 
             </LinearLayout>
 
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="25dp"
+            app:cardCornerRadius="16dp">
+
+            <LinearLayout
+                android:id="@+id/activity3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    android:maxWidth="50dp"
+                    android:src="@drawable/foldering" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="Work Related"
+                        android:textColor="@color/ColorBlackNote"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:drawableRight="@drawable/ic_right_icon"
+                        android:maxLines="3"
+                        android:text="Materials for work related \n files"
+                        android:textColor="@color/ColorBlackNote"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="25dp"
+            app:cardCornerRadius="16dp">
+
+            <LinearLayout
+                android:id="@+id/activity4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    android:maxWidth="50dp"
+                    android:src="@drawable/foldering" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="Job Portfolio"
+                        android:textColor="@color/ColorBlackNote"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:drawableRight="@drawable/ic_right_icon"
+                        android:maxLines="3"
+                        android:text="A collection of work samples about your capabilities to employers"
+                        android:textColor="@color/ColorBlackNote"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="20sp"
+            android:layout_marginRight="25dp"
+            app:cardCornerRadius="16dp">
+
+            <LinearLayout
+                android:id="@+id/activity5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    android:maxWidth="50dp"
+                    android:src="@drawable/foldering" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="Projects"
+                        android:textColor="@color/ColorBlackNote"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:drawableRight="@drawable/ic_right_icon"
+                        android:maxLines="3"
+                        android:text="Project materials to be \nreviewed"
+                        android:textColor="@color/ColorBlackNote"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.cardview.widget.CardView>
 
 
     </LinearLayout>
 
+
+   </ScrollView>
 
 </RelativeLayout>
